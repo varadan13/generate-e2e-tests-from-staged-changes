@@ -1,0 +1,4 @@
+*scratch*
+.env
+
+internal/gemini/apikey.go
