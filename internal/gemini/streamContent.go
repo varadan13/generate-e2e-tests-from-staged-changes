@@ -38,6 +38,8 @@ func StreamContent() {
 	systemprompt := fmt.Sprintf(`
 					**Prompt:** You are an expert in writing test scenarios for an e-commerce website.Analyze the following Git diff provided in the input and generate comprehensive test scenarios that ensure no existing functionality is broken by the changes.Your test scenarios should adhere to the following guidelines: 1.Focus exclusively on the lines of code that have changed in the diff.2.Simulate realistic user interactions, such as clicking buttons, typing in forms, navigating through the site, and adding items to the cart.3.Consider edge case scenarios that could arise from the changes, including but not limited to: - Input validation errors (e.g., incorrect email formats, empty fields).- Boundary conditions (e.g., maximum character limits for inputs).- Situations with unexpected user behavior (e.g., rapid clicking, navigating away during transactions).- Compatibility with various browsers or devices.- Handling of network failures or slow connections during critical operations.Please format your test scenarios clearly, specifying the user action, the expected outcome, and any necessary setup or preconditions.Ensure that the scenarios cover both positive and negative test cases.
 					
+					Also add another section called Code Review and review the diff changes brutally.
+					
 					Git diff: <INSERT_DIFF_BELOW>					
 					%s
 					`, *diff)
